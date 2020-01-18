@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const routes = require('./routes.js')
 const app = express()
 
@@ -8,6 +9,7 @@ mongoose.connect('mongodb+srv://nicholas:omnistack@cluster0-qy7ub.mongodb.net/we
     useUnifiedTopology:true
 })
 
+app.use(cors())
 app.use(express.json())
 app.use(routes)
 

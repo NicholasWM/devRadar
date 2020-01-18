@@ -29,3 +29,14 @@ Codigo:
 
 
 Fonte: https://icetutor.com/question/react-app-error-failed-to-construct-websocket-an-insecure-websocket-connection-may-not-be-initiated-from-a-page-loaded-over-https/
+
+
+# Cors
+
+A aplicacao web está na porta 3000 e o backend na porta 3333, o node tem o comportamento padrão de barrar o acesso por outras portas, para isso utilizamos o cors, para permitir esse acesso "Cross origin"
+
+    Dessa forma libera o acesso apenas para o origin
+    app.use(cors({origin: 'http://localhost:3000'}))
+    
+    Dessa forma libera o acesso externo para todo tipo de aplicacao
+    app.use(cors())
