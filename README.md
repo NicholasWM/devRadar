@@ -40,3 +40,12 @@ A aplicacao web está na porta 3000 e o backend na porta 3333, o node tem o comp
     
     Dessa forma libera o acesso externo para todo tipo de aplicacao
     app.use(cors())
+
+# Mobile Config Linux e Mac:
+Comando necessario para conseguir rodar o expo-cli de forma global
+    export PATH="$(yarn global bin):$PATH"
+fonte:https://yarnpkg.com/lang/en/docs/cli/global/
+
+# Utilizando Expo fora do localhost
+
+    expo start --tunnel
